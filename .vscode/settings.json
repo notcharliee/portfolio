@@ -1,0 +1,5 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2
+}

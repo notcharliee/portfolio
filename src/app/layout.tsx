@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     url: "https://charliee.dev",
     title: "charliee.dev",
     description:
-      "hey! my name’s charliee (they/them), and i’m a full-stack web developer from the uk. i mainly work with typescript, primarily in next.js projects.",
+      "hey there! my name’s charliee (they/them), and i’m a software developer from the uk. i code in typescript, and mainly work on webdev projects using next.js.",
     images: "/ogimage.gif",
   },
   twitter: {
     card: "summary",
     creator: "@notchxrliee",
     description:
-      "hey! my name’s charliee (they/them), and i’m a full-stack web developer from the uk. i mainly work with typescript, primarily in next.js projects.",
+      "hey there! my name’s charliee (they/them), and i’m a software developer from the uk. i code in typescript, and mainly work on webdev projects using next.js.",
     images: "/ogimage.gif",
   },
   metadataBase: new URL(env.BASE_URL),

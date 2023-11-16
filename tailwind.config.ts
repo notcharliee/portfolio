@@ -26,7 +26,6 @@ export default {
         "light-300": "rgb(208 208 208)",
         "light-200": "rgb(200 200 200)",
         "light-100": "rgb(192 192 192)",
-        phase: "rgb(164 0 255)",
       },
     },
   },

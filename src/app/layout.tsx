@@ -3,6 +3,8 @@ import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 
+import { Analytics } from '@vercel/analytics/react'
+
 import { env } from "@/env.mjs"
 
 export const metadata: Metadata = {
@@ -37,6 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-geist-sans ${GeistSans.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )

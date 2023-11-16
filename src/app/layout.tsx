@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "hey there! my name’s charliee (they/them), and i’m a software developer from the uk. i code in typescript, and mainly work on webdev projects using next.js.",
     images: "/ogimage.gif",
   },
-  metadataBase: new URL(env.BASE_URL),
+  metadataBase: new URL(env.NEXT_PUBLIC_BASE_URL),
 }
 
 export default function RootLayout({

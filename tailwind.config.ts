@@ -1,4 +1,5 @@
 import { type Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
 
 export default {
   content: ["./src/**/*.tsx"],
@@ -6,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         "geist-sans": "var(--font-geist-sans)",
+        "dm-serif-display": "var(--font-dm-serif-display)",
       },
       colors: {
         "dark-900": "rgb(0 0 0)",
@@ -26,8 +28,36 @@ export default {
         "light-300": "rgb(208 208 208)",
         "light-200": "rgb(200 200 200)",
         "light-100": "rgb(192 192 192)",
+        "purple-main": "rgb(20 12 28)",
+      },
+      backgroundImage: {
+        main: "url(/background.png)",
+      },
+      keyframes: {
+        slidedown: {
+          from: { opacity: "0", transform: "translateY(-50px)" },
+          to: { opacity: "1", transform: "none" },
+        },
+      },
+      animation: {
+        "slide-down": "slidedown 1.2s forwards",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            }
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        },
+      )
+    }),
+  ],
 } satisfies Config

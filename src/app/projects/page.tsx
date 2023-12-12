@@ -77,6 +77,35 @@ export default function ProjectsPage() {
           </div>
           <div className="flex animate-slide-down flex-col gap-4 rounded-lg border border-violet-400/50 bg-violet-400/10 p-4 opacity-0 shadow-inner shadow-violet-400/40 duration-300 animation-delay-[400ms]">
             <Image
+              src={"/projects/mcpack.png"}
+              width={356}
+              height={172}
+              alt=""
+              className="h-auto w-auto rounded-lg border border-violet-400/50"
+            ></Image>
+            <div className="flex justify-between">
+              <span>MCPack</span>
+              <div className="flex gap-2">
+                <Link
+                  href={"https://mcpack.charliee.dev"}
+                  className="text-light-100 duration-300 hover:text-light-900"
+                >
+                  {ExternalLinkSVG}
+                </Link>
+                <Link
+                  href={"https://github.com/notcharliee/mcpack"}
+                  className="text-light-100 duration-300 hover:text-light-900"
+                >
+                  {GitHubSVG}
+                </Link>
+              </div>
+            </div>
+            <p className="-mt-2 text-sm text-light-100">
+              A simple Minecraft resource pack builder.
+            </p>
+          </div>
+          <div className="flex animate-slide-down flex-col gap-4 rounded-lg border border-violet-400/50 bg-violet-400/10 p-4 opacity-0 shadow-inner shadow-violet-400/40 duration-300 animation-delay-[500ms]">
+            <Image
               src={"/projects/chubw4.png"}
               width={356}
               height={172}

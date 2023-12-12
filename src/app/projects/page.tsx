@@ -58,13 +58,13 @@ export default function ProjectsPage() {
               <span>Phase</span>
               <div className="flex gap-2">
                 <Link
-                  href={"https://charliee.dev"}
+                  href={"https://phasebot.xyz"}
                   className="text-light-100 duration-300 hover:text-light-900"
                 >
                   {ExternalLinkSVG}
                 </Link>
                 <Link
-                  href={"https://github.com/notcharliee/charliee.dev"}
+                  href={"https://github.com/notcharliee/phase"}
                   className="text-light-100 duration-300 hover:text-light-900"
                 >
                   {GitHubSVG}

@@ -1,6 +1,9 @@
 ---
 import "~/styles/base.css"
 
+import Header from "~/components/header.astro"
+import Footer from "~/components/footer.astro"
+
 import { ViewTransitions } from "astro:transitions"
 
 interface Props {
@@ -18,9 +21,6 @@ const { title, description } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="author" content="@mostlymayhem" />
-    <meta name="creator" content="@mostlymayhem" />
-    <meta name="keywords" content="Glass,Home,Decor,Terrariums,Handmade" />
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:site_name" content={title} />
@@ -48,22 +48,7 @@ const { title, description } = Astro.props
     <div
       class="h-[calc(100vh-5rem)] w-[calc(100vw-5rem)] sm:h-[calc(100vh-10rem)] sm:w-[calc(100vw-10rem)] bg-secondary border flex flex-col overflow-hidden relative"
     >
-      <header class="h-14 p-5 border-b flex justify-between">
-        <div class="flex gap-2.5">
-          <button
-            class="h-4 w-4 rounded-full border hover:bg-primary active:bg-neutral-300 active:border-neutral-300"
-          ></button>
-          <button
-            class="h-4 w-4 rounded-full border hover:bg-primary active:bg-neutral-300 active:border-neutral-300"
-          ></button>
-          <button
-            class="h-4 w-4 rounded-full border hover:bg-primary active:bg-neutral-300 active:border-neutral-300"
-          ></button>
-        </div>
-        <span class="leading-none font-mono font-extralight tracking-tighter">
-          {title}
-        </span>
-      </header>
+      <Header title={title} />
       <main
         class="h-full flex flex-col items-center justify-center overflow-hidden"
       >
@@ -71,35 +56,7 @@ const { title, description } = Astro.props
           <slot />
         </div>
       </main>
-      <footer
-        class="sticky bottom-0 p-5 w-full flex gap-5 items-center justify-between"
-      >
-        <div
-          class="flex gap-5 leading-none font-mono font-extralight tracking-tighter"
-        >
-          <a
-            href="/"
-            class="pb-1 border-b hover:text-neutral-300"
-            data-astro-prefetch>index</a
-          >
-          <a
-            href="/projects"
-            class="pb-1 border-b hover:text-neutral-300"
-            data-astro-prefetch>projects</a
-          >
-          <a
-            href="https://github.com/notcharliee"
-            target="_blank"
-            referrerpolicy="no-referrer"
-            class="pb-1 border-b hover:text-neutral-300">github</a
-          >
-        </div>
-        <div
-          class="hidden md:block leading-none font-mono font-extralight tracking-tighter"
-        >
-          <span>copyright {new Date().getFullYear()}</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   </body>
 </html>

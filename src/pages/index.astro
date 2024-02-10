@@ -1,0 +1,29 @@
+---
+import Layout from "~/layouts/layout.astro"
+
+const title = import.meta.url.split("/").pop()?.replace(".astro", ".html")!
+---
+
+<Layout title={title} description="Hello World">
+  <h1
+    class="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter w-full max-w-lg"
+  >
+    Hello world!
+  </h1>
+  <div class="space-y-5 lowercase tracking-tighter max-w-lg">
+    <p>
+      i’m a non-binary, neurodivergent software dev from the uk that makes cool
+      websites (and some other stuff too).
+    </p>
+    <p>
+      i began coding in early 2022 when I built my first discord bot. since then
+      i’ve built many more bots, alongside rest apis, npm packages, chrome
+      extensions, and game mods, but eventually i found my niche in webdev.
+    </p>
+    <p>
+      i started with javascript, but now i almost always use typescript for the
+      majority of my projects. for webdev, my preferred toolkit includes react,
+      astro, or nextjs, usually paired with tailwindcss as well.
+    </p>
+  </div>
+</Layout>

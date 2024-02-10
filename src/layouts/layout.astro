@@ -39,11 +39,11 @@ const { title, description } = Astro.props
     />
     <ViewTransitions />
   </head>
-  <body class="h-[100dvh] flex flex-col items-center justify-center">
+  <body class="h-[100dvh] overflow-hidden flex flex-col items-center justify-center">
     <img
       src="/vhs.gif"
       alt="VHS Effect"
-      class="absolute top-0 left-0 w-screen h-screen motion-reduce:hidden opacity-25 pointer-events-none z-50"
+      class="absolute top-0 left-0 w-screen h-screen opacity-25 pointer-events-none z-50 hidden motion-reduce:hidden sm:block"
     />
     <div class="h-[calc(100%-5rem)] w-[calc(100%-5rem)] sm:h-[calc(100%-10rem)] sm:w-[calc(100%-10rem)] bg-secondary border overflow-hidden">
       <Header title={title} />

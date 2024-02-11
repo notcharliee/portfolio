@@ -13,21 +13,18 @@ const { name, description, github, img, url } = Astro.props
 <div class="border relative">
   {
     url ? (
-      <a href={url} class="relative group">
+      <a href={url}>
         <img
           src={img}
           alt={name}
-          class="border-b w-full object-cover aspect-[1.9/1]"
+          class="border-b w-full object-cover aspect-[1.9/1] bg-neutral-800"
         />
-        <h4 class="hidden sm:block font-black text-lh uppercase opacity-0 group-hover:opacity-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          go to site
-        </h4>
       </a>
     ) : (
       <img
         src={img}
         alt={name}
-        class="border-b w-full object-cover aspect-[1.9/1]"
+        class="border-b w-full object-cover aspect-[1.9/1] bg-neutral-800"
       />
     )
   }
